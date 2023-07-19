@@ -1,0 +1,312 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+p {
+    font-size: 18px;
+}
+
+main {
+    background-color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    width: 280px;
+    height: 380px;
+    border-radius: 20px;
+}
+
+.result .p-result {
+    color: hsl(221, 100%, 96%);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.result .numbers {
+    position: relative;
+    margin: 0 auto;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.result .numbers p {
+    position: absolute;
+    top: 35px;
+    left: 45px;
+    font-size: 60px;
+    color: hsl(0, 0%, 100%);
+}
+
+.result .numbers span {
+    position: absolute;
+    top: 100px;
+    left: 55px;
+    color: hsl(241, 100%, 89%);
+}
+
+.result .result-footer {
+    margin-top: 20px;
+}
+
+.result .result-footer .p-great {
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.result .result-footer .text {
+    color: hsl(241, 100%, 89%);
+    text-align: center;
+    font-size: 14px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.summary {
+    background-color: hsl(0, 0%, 100%);
+    width: 280px;
+    height: 380px;
+    border-radius: 20px;
+}
+
+.summary > p {
+    color:  hsl(224, 30%, 27%);
+    font-weight: 800;
+    margin: 20px 30px;
+}
+
+.summary .points {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.summary .points.bg-red {
+    background-color: hsla(0, 100%, 67%, 0.15);
+}
+
+.summary .points .img-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary .points .img-text .red {
+    color: hsl(0, 100%, 67%);
+    font-weight: 800;
+}
+
+
+.summary .points.bg-yellow {
+    background-color: hsla(39, 100%, 56%, 0.15);
+}
+
+.summary .points .img-text .yellow {
+    color: hsl(39, 100%, 56%);
+    font-weight: 800;
+}
+
+
+.summary .points.bg-green {
+    background-color: hsla(166, 100%, 37%, 0.15);
+}
+
+.summary .points .img-text .green {
+    color: hsl(166, 100%, 37%);
+    font-weight: 800;
+}
+
+
+.summary .points.bg-blue {
+    background-color: hsla(234, 85%, 45%, 0.15);
+}
+
+.summary .points .img-text .blue {
+    color: hsl(234, 85%, 45%);
+    font-weight: 800;
+}
+
+.summary .points span:first-of-type {
+    color: hsl(224, 30%, 27%);
+    font-weight: bold;
+}
+
+.summary .points .img-text img {
+    margin-right: 10px;
+}
+
+.summary .points span:last-of-type {
+    color: hsl(224, 30%, 27%, 0.6);
+    font-weight: 400;
+}
+
+.summary button {
+    color: hsl(221, 100%, 96%);
+    background-color: hsl(224, 30%, 27%);
+    border: none;
+    outline: none;
+    width: 80%;
+    margin: 10px 30px;
+    padding: 10px 12px;
+    border-radius: 100px;
+}
+
+.summary button:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media (max-width: 430px) {
+    main {
+        position: relative;
+        display: block;
+        height: 100%;
+    }
+
+    .result {
+        position: absolute;
+        top: -10px;
+        z-index: 1;
+        width: 100%;
+        height: 45vh;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .result .p-result {
+        margin: 0;
+        padding: 20px 0 20px 0;
+    }
+
+    .result .numbers {
+        margin: 0 auto;
+        width: 130px;
+        height: 130px;
+    }
+
+    .result .numbers p {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        font-size: 60px;
+    }
+    
+    .result .numbers span {
+        top: 90px;
+        left: 40px;
+    }
+
+    .result .result-footer {
+        margin-top: 15px;
+    }
+    
+    .result .result-footer .p-great {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .result .result-footer .text {
+        font-size: 14px;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    .summary {
+        position: absolute;
+        top: 450px;
+        align-items: center;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .summary > p {
+        margin: 0px 60px;
+    }
+
+    .summary .points {
+        margin:  30px 60px;
+    }
+
+    .summary button {
+        width: 82%;
+    }
+
+}
+
+@media (max-width: 380px) {
+    main {
+        position: relative;
+        display: block;
+        height: 100%;
+    }
+
+    .result {
+        position: absolute;
+        top: -10px;
+        z-index: 1;
+        width: 100%;
+        height: 45vh;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .result .numbers {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+    }
+
+    .result .numbers p {
+        position: absolute;
+        top: 15px;
+        left: 30px;
+        font-size: 40px;
+    }
+    
+    .result .numbers span {
+        top: 60px;
+        left: 30px;
+    }
+
+    .summary {
+        top: 350px;
+    }
+
+    .summary > p {
+        margin: 20px 60px;
+    }
+
+    .summary .points {
+        margin:  30px 60px;
+    }
+
+}
+
+@media (max-width: 300px) {
+    .summary {
+        top: 280px;
+    }
+
+    .summary > p {
+        margin: 20px 30px;
+    }
+
+    .summary .points {
+        margin:  25px 30px;
+    }
+}
